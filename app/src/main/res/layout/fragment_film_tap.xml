@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_tab_ad.FilmFragment"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/layoutSearchFilm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/bg_input_login_sign_up">
+        <EditText
+            android:id="@+id/inputSearchFilmName"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="Search film name"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+        <ImageButton
+            android:id="@+id/btnSearchFilm"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/color_primary"
+            android:background="@drawable/bg_btn_search"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Delete all"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layoutSearchFilm"
+        app:layout_constraintEnd_toEndOf="@id/layoutSearchFilm"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/layoutSearchFilm"
+        android:id="@+id/txtDeleteAllFilm"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtDeleteAllFilm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        android:id="@+id/rcvFilm"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
